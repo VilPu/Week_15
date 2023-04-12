@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/btnAddItem"
+        android:layout_width="150dp"
+        android:layout_height="60dp"
+        android:layout_below="@+id/recyclerView"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="131dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="130dp"
+        android:onClick="addItem"
+        android:text="Uusi tuote"
+        android:textSize="18sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="406dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="48dp"
+        app:reverseLayout="false" />
+
+    <ImageButton
+        android:id="@+id/btnSortByTime"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="14dp"
+        android:layout_toStartOf="@+id/btnSortByAlphabet"
+        android:background="#D5D6D6"
+        android:onClick="sortByTime"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_my_calendar" />
+
+    <ImageButton
+        android:id="@+id/btnSortByAlphabet"
+        android:layout_width="75dp"
+        android:layout_height="62dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="23dp"
+        android:cropToPadding="false"
+        android:onClick="sortByAlphabet"
+        android:scaleType="centerCrop"
+        android:src="@android:drawable/ic_menu_sort_alphabetically" />
+
+</RelativeLayout>
